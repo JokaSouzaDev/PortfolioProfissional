@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joaquim de Souza | Soluções Digitais & Design</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-zinc-950 text-zinc-100 dark:bg-zinc-950 dark:text-zinc-100 transition-colors duration-300 font-sans antialiased">
+
+    <div class="fixed bottom-6 right-6 z-50">
+        <button onclick="toggleTheme()" class="w-16 h-16 rounded-full border-2 border-amber-500 bg-zinc-900 dark:bg-zinc-900 text-amber-400 flex items-center justify-center cursor-pointer shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300" aria-label="Alternar Tema">
+            <i id="theme-icon" class="fas fa-moon text-2xl"></i>
+        </button>
+    </div>
+
+    <section class="relative min-h-screen flex flex-col justify-between items-center px-4 py-16 text-center overflow-hidden">
+        <div id="hero-bg" class="absolute inset-0 z-0 bg-cover bg-center opacity-30 transition-opacity duration-300" 
+             style="background-image: url('https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=1920');"></div>
+        
+        <div id="hero-overlay" class="absolute inset-0 z-10 bg-gradient-to-b from-zinc-950 via-zinc-950/80 to-zinc-950"></div>
+
+        <div></div>
+
+        <div class="max-w-3xl relative z-20 space-y-8 my-auto px-2">
+            <span class="text-sm md:text-base tracking-[0.3em] uppercase text-amber-500 font-bold block">Portfólio Profissional</span>
+            <h1 id="main-title" class="text-5xl md:text-7xl font-extrabold tracking-tight text-white leading-tight">
+                JOAQUIM DE SOUZA
+            </h1>
+            <p id="main-desc" class="text-zinc-300 text-lg md:text-2xl font-normal leading-relaxed max-w-2xl mx-auto">
+                Transformo linhas de código complexas e designs estáticos em experiências digitais fluidas que capturam a atenção e convertem visitantes em clientes.
+            </p>
+            <div class="pt-6">
+                <a href="#trabalhos" class="inline-flex items-center gap-4 bg-amber-500 text-zinc-950 font-bold text-sm md:text-base tracking-wider uppercase px-8 py-5 hover:bg-amber-400 transition-all duration-300 rounded-full shadow-lg shadow-amber-500/20">
+                    Ver Projetos <i class="fas fa-chevron-down text-xs animate-bounce"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="relative z-20 text-center space-y-3 cursor-pointer">
+            <span id="scroll-text" class="text-xs md:text-sm tracking-[0.3em] uppercase block text-zinc-400 font-semibold">Role para explorar</span>
+            <div class="w-[2px] h-16 bg-gradient-to-b from-amber-500 to-transparent mx-auto"></div>
+        </div>
+    </section>
+
+    <section id="manifesto-section" class="py-24 bg-zinc-900/50 border-y border-zinc-900 px-6">
+        <div class="max-w-4xl mx-auto space-y-8 text-center md:text-left">
+            <span class="text-xs md:text-sm tracking-[0.3em] uppercase text-amber-500 font-bold block">O Problema que Resolvo</span>
+            <h2 id="manifesto-title" class="text-3xl md:text-5xl font-bold tracking-tight text-white leading-snug">
+                Sites lentos, designs amadores e sistemas falhos destroem a credibilidade de grandes negócios.
+            </h2>
+            <p id="manifesto-desc" class="text-zinc-300 font-normal leading-relaxed text-base md:text-xl">
+                O mercado está cheio de páginas genéricas. Meu trabalho é criar uma estrutura sob medida que une engenharia de dados robusta com apelo visual de alto padrão, garantindo autoridade máxima para o seu nome ou empresa.
+            </p>
+        </div>
+    </section>
+
+    <section id="benefits-section" class="py-24 max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <span class="text-sm tracking-[0.3em] uppercase text-amber-500 font-bold block mb-3">Vantagens Reais</span>
+            <h3 id="benefits-title" class="text-3xl md:text-5xl font-bold tracking-tight text-white">Por que construir seu ecossistema digital comigo?</h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="benefit-box bg-zinc-900 border border-zinc-800 p-8 rounded-3xl space-y-4 shadow-lg">
+                <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-500 text-2xl">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h4 class="text-xl font-bold text-white tracking-tight">Arquitetura Mobile-First</h4>
+                <p class="benefit-desc text-zinc-300 text-base leading-relaxed">
+                    Mais de 80% dos seus clientes chegam pelo celular. Eu desenho o layout pensando primeiro no smartphone, garantindo navegação ultra rápida, botões acessíveis e zero travamentos.
+                </p>
+            </div>
+
+            <div class="benefit-box bg-zinc-900 border border-zinc-800 p-8 rounded-3xl space-y-4 shadow-lg">
+                <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-500 text-2xl">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h4 class="text-xl font-bold text-white tracking-tight">Código Limpo e Autônomo</h4>
+                <p class="benefit-desc text-zinc-300 text-base leading-relaxed">
+                    Nada de ferramentas engessadas que tornam o site pesado. Utilizo tecnologias modernas e performáticas para criar aplicações leves, seguras e totalmente fáceis de expandir depois.
+                </p>
+            </div>
+
+            <div class="benefit-box bg-zinc-900 border border-zinc-800 p-8 rounded-3xl space-y-4 shadow-lg">
+                <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-500 text-2xl">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h4 class="text-xl font-bold text-white tracking-tight">Transparência Comercial</h4>
+                <p class="benefit-desc text-zinc-300 text-base leading-relaxed">
+                    Sem surpresas na cobrança ou taxas escondidas de plataformas terceiras. Trabalhamos com base em escopo técnico fechado: definimos o projeto, estipulamos o orçamento e você só paga o combinado.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="tech-section" class="py-24 max-w-6xl mx-auto px-6 border-t border-zinc-900">
+        <div class="text-center mb-16">
+            <span class="text-sm tracking-[0.3em] uppercase text-amber-500 font-bold block mb-3">Tecnologias</span>
+            <h3 id="tech-title" class="text-3xl md:text-4xl font-bold tracking-tight text-white">Arsenal Técnico de Trabalho</h3>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+            <div class="tech-box bg-zinc-900 border border-zinc-800 p-8 rounded-2xl text-center space-y-4 shadow-md">
+                <i class="fab fa-html5 text-5xl text-orange-500"></i>
+                <span class="block text-sm md:text-base font-bold tracking-wider uppercase text-zinc-200">HTML 5</span>
+            </div>
+            <div class="tech-box bg-zinc-900 border border-zinc-800 p-8 rounded-2xl text-center space-y-4 shadow-md">
+                <i class="fab fa-css3 text-5xl text-cyan-400"></i>
+                <span class="block text-sm md:text-base font-bold tracking-wider uppercase text-zinc-200">CSS 3</span>
+            </div>
+            <div class="tech-box bg-zinc-900 border border-zinc-800 p-8 rounded-2xl text-center space-y-4 shadow-md">
+                <i class="fab fa-python text-5xl text-sky-500"></i>
+                <span class="block text-sm md:text-base font-bold tracking-wider uppercase text-zinc-200">Python</span>
+            </div>
+            <div class="tech-box bg-zinc-900 border border-zinc-800 p-8 rounded-2xl text-center space-y-4 shadow-md">
+                <i class="fas fa-database text-5xl text-emerald-500"></i>
+                <span class="block text-sm md:text-base font-bold tracking-wider uppercase text-zinc-200">Supabase</span>
+            </div>
+            <div class="tech-box bg-zinc-900 border border-zinc-800 p-8 rounded-2xl text-center space-y-4 shadow-md">
+                <i class="fab fa-js text-5xl text-amber-500"></i>
+                <span class="block text-sm md:text-base font-bold tracking-wider uppercase text-zinc-200">JavaScript</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="trabalhos" class="py-24 bg-zinc-900/30 border-y border-zinc-900 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center md:text-left mb-16">
+                <span class="text-sm tracking-[0.3em] uppercase text-zinc-400 block mb-3">Trabalhos Recentes</span>
+                <h3 id="projects-title" class="text-3xl md:text-5xl font-bold tracking-tight text-white">Aplicações Práticas</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="project-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden flex flex-col justify-between group hover:border-amber-500/50 transition-all duration-300 shadow-2xl">
+                    <div>
+                        <div class="h-52 w-full overflow-hidden bg-zinc-800 relative">
+                            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=600" alt="Cardápio Digital Jerra Lanches" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <div class="flex justify-between items-center">
+                                <h4 class="text-xl font-bold text-white tracking-tight group-hover:text-amber-500 transition-colors">Cardápio Digital</h4>
+                                <a href="https://project-cardapio-one-page.vercel.app/" target="_blank" class="text-zinc-400 group-hover:text-amber-500 transition-colors"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                            <p class="project-desc text-zinc-300 text-sm leading-relaxed">
+                                Interface mobile-first de alta performance para lanchonete local, integrada com a API do WhatsApp. Foco em velocidade de carregamento e experiência de pedido sem barreiras.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 flex flex-wrap gap-2">
+                        <span class="text-[10px] font-bold uppercase tracking-wider bg-zinc-950 px-3 py-1 rounded-full text-zinc-400">HTML</span>
+                        <span class="text-[10px] font-bold uppercase tracking-wider bg-zinc-950 px-3 py-1 rounded-full text-zinc-400">CSS</span>
+                        <span class="text-[10px] font-bold uppercase tracking-wider bg-zinc-950 px-3 py-1 rounded-full text-zinc-400">JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="project-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden flex flex-col justify-between group hover:border-amber-500/50 transition-all duration-300 shadow-2xl">
+                    <div>
+                        <div class="h-52 w-full overflow-hidden bg-zinc-800 relative">
+                            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=600" alt="Landing Page Studio Hair" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <div class="flex justify-between items-center">
+                                <h4 class="text-xl font-bold text-white tracking-tight group-hover:text-amber-500 transition-colors">Landing Page Barbearia</h4>
+                                <a href="https://project-barbearia-one-page.vercel.app/" target="_blank" class="text-zinc-400 group-hover:text-amber-500 transition-colors"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                            <p class="project-desc text-zinc-300 text-sm leading-relaxed">
+                                Design premium e minimalista para salão de estética voltado a loiros e processos químicos complexos. Inclui portfólio interativo "antes/depois" e direcionamento ágil de agendamentos.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 flex flex-wrap gap-2">
+                        <span class="text-[10px] font-bold uppercase tracking-wider bg-zinc-950 px-3 py-1 rounded-full text-zinc-400">HTML</span>
+                        <span class="text-[10px] font-bold uppercase tracking-wider bg-zinc-950 px-3 py-1 rounded-full text-zinc-400">CSS</span>
+                        <span class="text-[10px] font-bold uppercase tracking-wider bg-zinc-950 px-3 py-1 rounded-full text-zinc-400">JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="project-card bg-zinc-900 border border-amber-500/30 rounded-3xl overflow-hidden flex flex-col justify-between group hover:border-amber-500 transition-all duration-300 shadow-xl shadow-amber-500/5">
+                    <div>
+                        <div class="h-52 w-full overflow-hidden bg-zinc-800 relative">
+                            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=600" alt="One Page para Clínica Odontológica" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <div class="flex justify-between items-center">
+                                <h4 class="text-xl font-bold text-amber-500 tracking-tight">One Page para Clínica Odontológica</h4>
+                                <a href="https://project-clinica-one-page.vercel.app/" target="_blank" class="text-amber-500/80 hover:text-amber-500 transition-colors"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                            <p class="project-desc text-zinc-300 text-sm leading-relaxed">
+                                Landing page institucional para clínica integrada. Conta com lógica robusta em TypeScript ligada ao banco de dados Supabase para captação estável de novos cadastros e consultas.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 flex flex-wrap gap-2">
+                        <span class="text-[10px] font-bold uppercase tracking-wider bg-zinc-950 px-3 py-1 rounded-full text-zinc-400">HTML</span>
+                        <span class="text-[10px] font-bold uppercase tracking-wider bg-zinc-950 px-3 py-1 rounded-full text-zinc-400">CSS</span>
+                        <span class="text-[10px] font-bold uppercase tracking-wider bg-zinc-950 px-3 py-1 rounded-full text-zinc-400">JavaScript</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="feedback-section" class="py-24 max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <span class="text-sm tracking-[0.3em] uppercase text-zinc-400 block mb-3">Depoimentos</span>
+            <h3 id="feedback-title" class="text-3xl md:text-4xl font-bold tracking-tight text-white">Avaliação dos Clientes</h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="feedback-box bg-zinc-900 border border-zinc-800 p-8 rounded-2xl flex flex-col justify-between space-y-6 shadow-md">
+                <p class="text-zinc-200 text-base md:text-lg font-normal italic leading-relaxed">
+                    "O Joaquim conseguiu extrair exatamente a essência da nossa marca e entregar um ambiente rápido e impecável. Comunicação clara sobre prazos e orçamento do início ao fim."
+                </p>
+                <div class="flex items-center gap-4">
+                    <span class="w-8 h-[2px] bg-amber-500"></span>
+                    <span class="text-sm font-bold text-zinc-300 uppercase tracking-wider">Rosimeire A. - Jd. Pres. Dutra</span>
+                </div>
+            </div>
+
+            <div class="feedback-box bg-zinc-900 border border-zinc-800 p-8 rounded-2xl flex flex-col justify-between space-y-6 shadow-md">
+                <p class="text-zinc-200 text-base md:text-lg font-normal italic leading-relaxed">
+                    "Excelente entrega das soluções. Automatizou tarefas complexas do nosso ecossistema e gerou uma interface limpa e intuitiva para o gerenciamento."
+                </p>
+                <div class="flex items-center gap-4">
+                    <span class="w-8 h-[2px] bg-amber-500"></span>
+                    <span class="text-sm font-bold text-zinc-300 uppercase tracking-wider">Rafael A. - Jd. Pres. Dutra</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-section" class="py-24 bg-zinc-950 border-t border-zinc-900 px-6">
+        <div class="max-w-3xl mx-auto text-center space-y-8">
+            <h3 id="contact-title" class="font-bold text-4xl md:text-6xl tracking-tight text-white">Vamos alinhar o seu projeto?</h3>
+            <p id="contact-desc" class="text-zinc-300 text-lg md:text-xl font-normal max-w-2xl mx-auto leading-relaxed">
+                Entre em contato para avaliarmos suas necessidades técnicas. Alinhamos o escopo completo e definimos um **orçamento fechado** ideal para o seu negócio.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
+                <a href="https://wa.me/5511949492007?text=Olá Joaquim, vi seu portfólio e gostaria de solicitar uma análise de orçamento." target="_blank" 
+                   class="inline-flex items-center justify-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-base tracking-wider uppercase px-10 py-5 w-full sm:w-auto shadow-2xl transition-all duration-300 rounded-full">
+                    <i class="fab fa-whatsapp text-xl"></i> Falar no WhatsApp
+                </a>
+
+                <a href="mailto:joaquimdesouza.contato@exemplo.com?subject=Solicitação de Orçamento Digital" 
+                   class="inline-flex items-center justify-center gap-3 bg-zinc-900 border-2 border-zinc-700 text-white hover:bg-zinc-800 font-bold text-base tracking-wider uppercase px-10 py-5 w-full sm:w-auto shadow-2xl transition-all duration-300 rounded-full">
+                    <i class="far fa-envelope text-xl"></i> Enviar E-mail
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-zinc-950 text-zinc-500 text-xs tracking-widest py-8 text-center uppercase border-t border-zinc-900">
+        <p>&copy; 2026 Joaquim de Souza. Engenharia & Desenvolvimento.</p>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const icon = document.getElementById('theme-icon');
+            
+            const body = document.body;
+            const heroBg = document.getElementById('hero-bg');
+            const heroOverlay = document.getElementById('hero-overlay');
+            const mainTitle = document.getElementById('main-title');
+            const mainDesc = document.getElementById('main-desc');
+            const scrollText = document.getElementById('scroll-text');
+            const manifestoSection = document.getElementById('manifesto-section');
+            const manifestoTitle = document.getElementById('manifesto-title');
+            const manifestoDesc = document.getElementById('manifesto-desc');
+            const benefitsTitle = document.getElementById('benefits-title');
+            const techTitle = document.getElementById('tech-title');
+            const projectsTitle = document.getElementById('projects-title');
+            const feedbackTitle = document.getElementById('feedback-title');
+            const contactSection = document.getElementById('contact-section');
+            const contactTitle = document.getElementById('contact-title');
+            const contactDesc = document.getElementById('contact-desc');
+            
+            const benefitBoxes = document.querySelectorAll('.benefit-box');
+            const benefitDescs = document.querySelectorAll('.benefit-desc');
+            const techBoxes = document.querySelectorAll('.tech-box');
+            const projectCards = document.querySelectorAll('.project-card');
+            const projectDescs = document.querySelectorAll('.project-desc');
+            const feedbackBoxes = document.querySelectorAll('.feedback-box');
+
+            if (html.classList.contains('dark')) {
+                // CONFIGURANDO MODO CLARO
+                html.classList.remove('dark');
+                icon.classList.replace('fa-moon', 'fa-sun');
+                localStorage.setItem('theme', 'light');
+
+                body.className = "bg-zinc-50 text-zinc-900 transition-colors duration-300 font-sans antialiased";
+                heroBg.className = "absolute inset-0 z-0 bg-cover bg-center opacity-60 transition-opacity duration-300";
+                heroOverlay.className = "absolute inset-0 z-10 bg-gradient-to-b from-white/90 via-white/70 to-zinc-50";
+                mainTitle.className = "text-5xl md:text-7xl font-extrabold tracking-tight text-zinc-950 leading-tight";
+                mainDesc.className = "text-zinc-800 text-lg md:text-2xl font-normal leading-relaxed max-w-2xl mx-auto";
+                scrollText.className = "text-xs md:text-sm tracking-[0.3em] uppercase block text-zinc-700 font-semibold";
+                manifestoSection.className = "py-24 bg-zinc-200/60 border-y border-zinc-300 px-6";
+                manifestoTitle.className = "text-3xl md:text-5xl font-bold tracking-tight text-zinc-950 leading-snug";
+                manifestoDesc.className = "text-zinc-800 font-normal leading-relaxed text-base md:text-xl";
+                benefitsTitle.className = "text-3xl md:text-5xl font-bold tracking-tight text-zinc-950";
+                techTitle.className = "text-3xl md:text-4xl font-bold tracking-tight text-zinc-950";
+                projectsTitle.className = "text-3xl md:text-5xl font-bold tracking-tight text-zinc-950";
+                feedbackTitle.className = "text-3xl md:text-4xl font-bold tracking-tight text-zinc-950";
+                contactSection.className = "py-24 bg-zinc-100 border-t border-zinc-300 px-6";
+                contactTitle.className = "font-bold text-4xl md:text-6xl tracking-tight text-zinc-950";
+                contactDesc.className = "text-zinc-800 text-lg md:text-xl font-normal max-w-2xl mx-auto leading-relaxed";
+
+                benefitBoxes.forEach(box => box.className = "benefit-box bg-white border border-zinc-300 p-8 rounded-3xl space-y-4 shadow-lg text-zinc-950");
+                benefitDescs.forEach(p => p.className = "benefit-desc text-zinc-800 text-base leading-relaxed");
+                techBoxes.forEach(box => box.className = "tech-box bg-white border border-zinc-300 p-8 rounded-2xl text-center space-y-4 shadow-md text-zinc-900");
+                projectCards.forEach(card => card.className = "project-card bg-white border border-zinc-300 rounded-3xl overflow-hidden flex flex-col justify-between group hover:border-amber-500/50 transition-all duration-300 shadow-xl");
+                projectDescs.forEach(p => p.className = "project-desc text-zinc-800 text-sm leading-relaxed");
+                feedbackBoxes.forEach(fb => fb.className = "feedback-box bg-white border border-zinc-300 p-8 rounded-2xl flex flex-col justify-between space-y-6 shadow-md text-zinc-900");
+
+            } else {
+                // CONFIGURANDO MODO ESCURO (PADRÃO)
+                html.classList.add('dark');
+                icon.classList.replace('fa-sun', 'fa-moon');
+                localStorage.setItem('theme', 'dark');
+
+                body.className = "bg-zinc-950 text-zinc-100 transition-colors duration-300 font-sans antialiased";
+                heroBg.className = "absolute inset-0 z-0 bg-cover bg-center opacity-30 transition-opacity duration-300";
+                heroOverlay.className = "absolute inset-0 z-10 bg-gradient-to-b from-zinc-950 via-zinc-950/80 to-zinc-950";
+                mainTitle.className = "text-5xl md:text-7xl font-extrabold tracking-tight text-white leading-tight";
+                mainDesc.className = "text-zinc-300 text-lg md:text-2xl font-normal leading-relaxed max-w-2xl mx-auto";
+                scrollText.className = "text-xs md:text-sm tracking-[0.3em] uppercase block text-zinc-400 font-semibold";
+                manifestoSection.className = "py-24 bg-zinc-900/50 border-y border-zinc-900 px-6";
+                manifestoTitle.className = "text-3xl md:text-5xl font-bold tracking-tight text-white leading-snug";
+                manifestoDesc.className = "text-zinc-300 font-normal leading-relaxed text-base md:text-xl";
+                benefitsTitle.className = "text-3xl md:text-5xl font-bold tracking-tight text-white";
+                techTitle.className = "text-3xl md:text-4xl font-bold tracking-tight text-white";
+                projectsTitle.className = "text-3xl md:text-5xl font-bold tracking-tight text-white";
+                feedbackTitle.className = "text-3xl md:text-4xl font-bold tracking-tight text-white";
+                contactSection.className = "py-24 bg-zinc-950 border-t border-zinc-900 px-6";
+                contactTitle.className = "font-bold text-4xl md:text-6xl tracking-tight text-white";
+                contactDesc.className = "text-zinc-300 text-lg md:text-xl font-normal max-w-2xl mx-auto leading-relaxed";
+
+                benefitBoxes.forEach(box => box.className = "benefit-box bg-zinc-900 border border-zinc-800 p-8 rounded-3xl space-y-4 shadow-lg text-white");
+                benefitDescs.forEach(p => p.className = "benefit-desc text-zinc-300 text-base leading-relaxed");
+                techBoxes.forEach(box => box.className = "tech-box bg-zinc-900 border border-zinc-800 p-8 rounded-2xl text-center space-y-4 shadow-md text-white");
+                projectCards.forEach(card => card.className = "project-card bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden flex flex-col justify-between group hover:border-amber-500/50 transition-all duration-300 shadow-2xl");
+                projectDescs.forEach(p => p.className = "project-desc text-zinc-300 text-sm leading-relaxed");
+                feedbackBoxes.forEach(fb => fb.className = "feedback-box bg-zinc-900 border border-zinc-800 p-8 rounded-2xl flex flex-col justify-between space-y-6 shadow-md text-white");
+            }
+        }
+
+        // Script de inicialização respeitando a escolha salva
+        document.addEventListener("DOMContentLoaded", function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.documentElement.classList.add('dark');
+                toggleTheme();
+            }
+        });
+    </script>
+</body>
+</html>
